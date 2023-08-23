@@ -1,0 +1,8 @@
+***Etiquetas de Audio***
+a)
+HTML5 admite varios formatos de audio para la etiqueta <audio>. Algunos de ellos son:
+
+-MP3 (MPEG Audio Layer III): Ampliamente compatible en la mayoría de los navegadores.
+-Ogg Vorbis: Un formato de audio de código abierto, compatible con muchos navegadores, especialmente Firefox.
+-WAV (Waveform Audio File Format): Soportado en la mayoría de los navegadores.
+-AAC (Advanced Audio Coding): Compatible con navegadores modernos, especialmente en dispositivos Apple.
