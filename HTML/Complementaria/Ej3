@@ -1,0 +1,7 @@
+***Etiquetas de video***
+a)
+HTML5 admite varios formatos de video para la etiqueta <video>. Los mas comunes son:
+-MP4 (MPEG-4 Part 14): Ampliamente compatible en la mayoría de los navegadores, especialmente en navegadores populares como Chrome, Firefox y Safari. Es una elección segura para la reproducción de video en línea.
+-WebM: Un formato de video de código abierto desarrollado para la web. Es compatible con navegadores como Chrome, Firefox y Opera.
+-Ogg/Theora: El formato Ogg puede contener video en el formato Theora. Es compatible con navegadores que admiten Ogg, como Firefox.
+-MKV (Matroska): Aunque menos común que los formatos anteriores, algunos navegadores pueden admitir archivos MKV como contenedores de video.
