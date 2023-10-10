@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de elemento de video en HTML5</title>
+    <title>Ejemplo de elemento de audio en HTML5</title>
     <style>
         /* Estilos para el fondo gris */
         body {
@@ -16,7 +16,7 @@
         }
 
         /* Estilos para el div contenedor */
-        .video-container {
+        .audio-container {
             background-color: #333;
             padding: 20px;
             border: 2px solid #000;
@@ -25,26 +25,24 @@
         }
 
         /* Estilos para el texto dentro del div */
-        h1 {
+        p {
             color: #fff;
         }
 
-        /* Estilos para el elemento de video */
-        video {
+        /* Estilos para el elemento de audio */
+        audio {
             width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <h1>Ejemplo de elemento de video en HTML5</h1>
-    
-        <!-- Etiqueta de video con múltiples fuentes (src) -->
-        <video controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            <source src="https://www.w3schools.com/html/mov_bbb.ogv" type="video/ogg">
-            Tu navegador no soporta la reproducción de video.
-        </video>
+    <div class="audio-container">
+        <p>Reproduciendo una muestra de audio:</p>
+        <!-- Etiqueta de audio con una fuente (src) -->
+        <audio controls>
+            <source src="/vincent.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
     </div>
 </body>
 </html>
