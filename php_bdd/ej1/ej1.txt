@@ -1,0 +1,80 @@
+a)Para comenzar la comunicación con un servidor de base de datos MySQL, es 
+necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función 
+
+mysqli_connect. Esta funcion se utiliza para inciar la conexión con el sevidor MySQL.
+
+b)Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios: 
+-Nombre del host ($host): El nombre o la dirección IP del servidor de base de datos MySQL al que uno desea conectarse. 
+-Nombre de usuario ($usuario): El nombre de usuario que se utilizará para autenticarse en el servidor de base de datos MySQL. 
+-Contraseña ($contrasena): La contraseña correspondiente al nombre de usuario proporcionado. 
+
+c)Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función 
+
+mysqli_select_db. Esta función se utiliza para cambiar la base de datos activa a la que se harán todas las consultas posteriores en esa conexión.
+
+d)Esta función debe pasar como parámetro 
+
+El primer parámetro es la conexión a la base de datos. Se debe pasar la variable que almacena la conexión a MySQL que se obtuvo previamente al usar mysqli_connect. 
+
+El segundo parámetro es el nombre de la base de datos. Se debe proporcionar el nombre de la base de datos que se quiere seleccionar para realizar consultas posteriores.
+
+Ej
+
+mysqli_select_db($conexion, $nombre_bdd);
+
+e)La función mysqli_query () se utiliza para 
+
+La función mysqli_query() en PHP se utiliza para enviar una consulta SQL al servidor de base de datos y ejecutarla en la base de datos activa. Su resultado generalmente es un objeto que representa el resultado de la consulta.
+
+f)La función mysqli_query() en PHP requiere dos parámetros:
+
+1.  La conexión a la base de datos: Se debe proporcionar la variable que almacena la conexión a la base de datos que se obtuvo previamente al usar mysqli_connect. 
+2.  La consulta SQL: Se debe proporcionar una cadena que contenga la consulta SQL que se desea ejecutar en la base de datos.
+
+Ej:
+
+$resultado = mysqli_query($conexion, $consulta_sql);
+
+g)La cláusula or die() se utiliza para 
+
+La cláusula 'or die()' se utiliza en PHP para manejar errores que puedan ocurrir durante la ejecución de una consulta SQL u otra operación que interactúa con una base de datos. Suele utilzarse junto con una funcion que ejecuta una consulta, como, por ejemplo, mysqli_query
+
+Ej:
+
+$resultado = mysqli_query($conexion, $consulta_sql) or die("Error: " . mysqli_error($conexion));
+
+i)Y  la función mysqli_error () se puede usar para
+
+La función mysqli_error() en PHP se utiliza para obtener una descripción del error que ocurrió en la última operación de MySQL realizada con la conexión proporcionada.
+Cuando se llama a mysqli_error(), devuelve una cadena que contiene un mensaje descriptivo del último error que ocurrió en la conexión especificada.
+
+Ej:
+
+$resultado = mysqli_query($conexion, $consulta_sql);
+
+if (!$resultado) {
+    $mensaje_de_error = mysqli_error($conexion);
+}
+
+j)
+
+<?php
+while ($fila = mysqli_fetch_array($vResultado)) 
+{
+?>
+<tr>
+ <td><?php echo ($fila[0]); ?></td>
+ <td><?php echo ($fila[1]); ?></td>
+ <td><?php echo ($fila[2']); ?></td>
+</tr> 
+<tr>
+ <td colspan="5">
+<?php
+}
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+
+Este código se utiliza para ejecutar una consulta SQL, recorrer las filas de resultados y mostrarlos en una tabla HTML que posee 3 columnas.
+Ademas, vemos que despues de procesar todas las filas del conjunto, se utiliza la función 'mysqli_free_result($vResultado)' para liberar los recursos ascoiados con el conjunto de resultados. 
+Al final, se cierra la conexión a la bdd para asi liberar los recursos de la conexión.
